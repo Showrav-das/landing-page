@@ -1,0 +1,8 @@
+- navbar - done
+- hero part
+- brands section
+- two columns
+- features section
+- two columns
+- form section
+- footer section - in progress

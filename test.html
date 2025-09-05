@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biccas - Increase Your Team Productivity | Collaboration Platform</title>
+  <meta name="description" content="Boost your team's productivity with Biccas collaboration platform. Features include cloud storage, analytics, team management, and flexible pricing plans for businesses of all sizes." />
+  <meta name="keywords" content="productivity platform, team collaboration, cloud storage, project management, business analytics, SaaS platform" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Biccas - Increase Your Team Productivity | Collaboration Platform" />
+  <meta property="og:description" content="Boost your team's productivity with Biccas collaboration platform. Features include cloud storage, analytics, team management, and flexible pricing plans for businesses of all sizes." />
+  
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #191a15;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    button {
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    
+    input, textarea {
+      font-family: inherit;
+      border: none;
+      outline: none;
+    }
+    
+    /* Layout components */
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    
+    .main-wrapper {
+      position: relative;
+      min-height: 100vh;
+      background-color: #ffffff;
+    }
+    
+    .background-elements {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .bg-ellipse-1 {
+      position: absolute;
+      /* top: 2176px; */
+      left: 0;
+      width: 440px;
+      height: 634px;
+      background-image: url('../assets/images/img_ellipse_41.png');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .bg-ellipse-2 {
+      position: absolute;
+      top: 0;
+      right: 224px;
+      width: 634px;
+      height: 270px;
+      background-image: url('../assets/images/img_ellipse_39.png');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .bg-ellipse-3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 316px;
+      height: 354px;
+      background-image: url('../assets/images/img_ellipse_36.png');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .bg-ellipse-4 {
+      position: absolute;
+      top: 270px;
+      right: 0;
+      width: 316px;
+      height: 634px;
+      background-image: url('../assets/images/img_ellipse_37.png');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .bg-ellipse-5 {
+      position: absolute;
+      top: 3278px;
+      right: 0;
+      width: 316px;
+      height: 634px;
+      background-image: url('../assets/images/img_ellipse_37.png');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .bg-shadow {
+      position: absolute;
+      top: 218px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 634px;
+      height: 634px;
+      background-color: #ffffff;
+      border-radius: 316px;
+      box-shadow: 0px 4px 1000px #888888ff;
+    }
+    
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 19px 0 68px;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .logo {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 61px;
+      color: #54bd95;
+    }
+    
+    .nav-menu {
+      display: none;
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .nav-item {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #a6a6a6;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-item.active {
+      font-size: 18px;
+      color: #000000;
+    }
+    
+    .nav-item:hover {
+      color: #54bd95;
+    }
+    
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    
+    .login-btn {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #a6a6a6;
+      background: none;
+      padding: 8px 0;
+    }
+    
+    .signup-btn {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #f8f8fa;
+      background-color: #54bd95;
+      padding: 8px 10px;
+      border-radius: 10px;
+    }
+    
+    .hamburger {
+      display: block;
+      background: none;
+      font-size: 24px;
+      color: #191a15;
+    }
+    
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 40px 0 80px;
+      position: relative;
+    }
+    
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    .hero-title {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 54px;
+      color: #191a15;
+    }
+    
+    .hero-decoration {
+      width: 100%;
+      height: 26px;
+      background-image: url('../assets/images/img_vector_32.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left;
+    }
+    
+    .hero-description {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 30px;
+      color: #000000;
+    }
+    
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    
+    .cta-button {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      color: #ffffff;
+      background-color: #54bd95;
+      padding: 16px 24px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      background-color: #4a9d7f;
+      transform: translateY(-2px);
+    }
+    
+    .demo-section {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    
+    .play-button {
+      width: 32px;
+      height: 32px;
+      background-image: url('../assets/images/img_iconly_light_play.svg');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .demo-text {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      color: #191a15;
+    }
+    
+    .hero-visual {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      background-color: #ffc728;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .hero-image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 80%;
+      height: auto;
+    }
+    
+    .hero-cards {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .payment-card {
+      background-color: #ffffff;
+      padding: 12px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .card-info {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    
+    .card-label {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 15px;
+      color: #a9a7b6;
+    }
+    
+    .card-amount {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #000000;
+    }
+    
+    .send-btn {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 16px;
+      color: #ffffff;
+      background-color: #52bd94;
+      padding: 4px 16px;
+      border-radius: 14px;
+    }
+    
+    .income-card {
+      background-color: #ffffff;
+      padding: 12px;
+      border-radius: 10px;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+    }
+    
+    .income-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .income-text {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 15px;
+      color: #a9a7b6;
+    }
+    
+    .income-amount {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #000000;
+    }
+    
+    .chart-icon {
+      width: 20px;
+      height: 20px;
+      background-image: url('../assets/images/img_bar_chart_2_1.svg');
+      background-size: cover;
+    }
+    
+    /* Companies Section */
+    .companies {
+      padding: 60px 0;
+      text-align: center;
+    }
+    
+    .companies-title {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 49px;
+      color: #191a15;
+      margin-bottom: 48px;
+    }
+    
+    .companies-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+    }
+    
+    .company-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+    
+    .company-item:hover {
+      opacity: 1;
+    }
+    
+    .company-logo {
+      width: 32px;
+      height: 32px;
+    }
+    
+    .company-name {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 37px;
+      color: #a6a6a6;
+    }
+    
+    /* Support Section */
+    .support-section {
+      background-color: #f9f8fe;
+      padding: 60px 0;
+    }
+    
+    .support-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .support-text {
+      flex: 1;
+    }
+    
+    .support-title {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 60px;
+      color: #191a15;
+      margin-bottom: 30px;
+    }
+    
+    .support-description {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 30px;
+      color: #a6a6a6;
+      margin-bottom: 72px;
+    }
+    
+    .ratings {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .rating-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+    
+    .stars {
+      display: flex;
+      gap: 4px;
+    }
+    
+    .star {
+      width: 24px;
+      height: 24px;
+      background-color: #ffd700;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+    
+    .rating-text {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22px;
+      color: #191a15;
+      text-align: center;
+    }
+    
+    .rating-company {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22px;
+      color: #a6a6a6;
+    }
+    
+    .support-features {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    .feature-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 4px 9px #0000000c;
+      flex-shrink: 0;
+    }
+    
+    .feature-content {
+      flex: 1;
+    }
+    
+    .feature-title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 34px;
+      color: #191a15;
+      margin-bottom: 10px;
+    }
+    
+    .feature-description {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 30px;
+      color: #a6a6a6;
+    }
+    
+    /* Features Section */
+    .features-section {
+      padding: 80px 0;
+    }
+    
+    .features-header {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 74px;
+      text-align: center;
+    }
+    
+    .features-title {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 60px;
+      color: #191a15;
+    }
+    
+    .features-description {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 30px;
+      color: #a6a6a6;
+    }
+    
+    .get-started-btn {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      color: #ffffff;
+      background-color: #54bd95;
+      padding: 20px 30px;
+      border-radius: 32px;
+      align-self: center;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 44px;
+    }
+    
+    .feature-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+    }
+    
+    .feature-image {
+      width: 100%;
+      height: 300px;
+      border-radius: 20px;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .collaboration-image {
+      background-image: url('../assets/images/img_frame_247.svg');
+    }
+    
+    .storage-image {
+      background-color: #f9f8fe;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .analytics-image {
+      background-color: #f9f8fe;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .feature-info {
+      text-align: center;
+    }
+    
+    .feature-card-title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 37px;
+      color: #191a15;
+      margin-bottom: 12px;
+    }
+    
+    .feature-card-description {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 30px;
+      color: #a6a6a6;
+    }
+    
+    /* Benefits Section */
+    .benefits-section {
+      padding: 80px 0;
+    }
+    
+    .benefits-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .benefits-text {
+      flex: 1;
+    }
+    
+    .benefits-title {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 60px;
+      color: #191a15;
+      margin-bottom: 50px;
+    }
+    
+    .benefits-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    .benefit-item {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    
+    .check-icon {
+      width: 32px;
+      height: 32px;
+      background-image: url('../assets/images/img_subtract.svg');
+      background-size: cover;
+      flex-shrink: 0;
+    }
+    
+    .benefit-text {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      color: #191a15;
+    }
+    
+    .benefits-visual {
+      position: relative;
+      width: 100%;
+      height: 400px;
+    }
+    
+    .benefits-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    
+    .success-notification {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background-color: #ffffff;
+      padding: 22px 60px 22px 22px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 9px #0000000c;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    
+    .success-icon {
+      width: 24px;
+      height: 24px;
+      background-image: url('../assets/images/img_circle_1.svg');
+      background-size: cover;
+    }
+    
+    .success-text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #191a15;
+    }
+    
+    /* Pricing Section */
+    .pricing-section {
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .pricing-header {
+      margin-bottom: 40px;
+    }
+    
+    .pricing-title {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 73px;
+      color: #191a15;
+      margin-bottom: 40px;
+    }
+    
+    .pricing-subtitle {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22px;
+      color: #a6a6a6;
+      margin-bottom: 40px;
+    }
+    
+    .billing-toggle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 6px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 9px #0000000c;
+      margin-bottom: 66px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .billing-option {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      padding: 14px 34px;
+      border-radius: 10px;
+      background: none;
+      color: #191a15;
+      transition: all 0.3s ease;
+    }
+    
+    .billing-option.active {
+      background-color: #54bd95;
+      color: #ffffff;
+    }
+    
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .pricing-card {
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 24px 20px;
+      box-shadow: 0px 4px 9px #0000000c;
+      position: relative;
+    }
+    
+    .pricing-card.featured {
+      background-color: #54bd95;
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+    
+    .save-badge {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #84d9b9;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    
+    .plan-header {
+      margin-bottom: 40px;
+    }
+    
+    .plan-name {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 37px;
+      margin-bottom: 6px;
+    }
+    
+    .plan-description {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 27px;
+      color: #a6a6a6;
+      margin-bottom: 14px;
+    }
+    
+    .pricing-card.featured .plan-description {
+      color: #ffffff;
+    }
+    
+    .plan-price {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 4px;
+    }
+    
+    .currency {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      color: #a6a6a6;
+    }
+    
+    .pricing-card.featured .currency {
+      color: #ffffff;
+    }
+    
+    .price {
+      font-size: 50px;
+      font-weight: 600;
+      line-height: 61px;
+    }
+    
+    .plan-features {
+      margin-bottom: 26px;
+    }
+    
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 26px;
+    }
+    
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .feature-check {
+      width: 26px;
+      height: 26px;
+      background-image: url('../assets/images/img_subtract_teal_300_01.svg');
+      background-size: cover;
+      flex-shrink: 0;
+    }
+    
+    .feature-text {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      color: #191a15;
+    }
+    
+    .plan-button {
+      width: 100%;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+      padding: 18px 34px;
+      border-radius: 20px;
+      background-color: #ffffff;
+      color: #54bd95;
+      box-shadow: 0px 4px 9px #0000000c;
+      transition: all 0.3s ease;
+    }
+    
+    .pricing-card.featured .plan-button {
+      background-color: #54bd95;
+      color: #ffffff;
+    }
+    
+    .plan-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0px 8px 20px #0000001a;
+    }
+    
+    /* Testimonials Section */
+    .testimonials-section {
+      background-color: #161c28;
+      padding: 40px 0;
+    }
+    
+    .testimonials-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .testimonials-text {
+      flex: 1;
+    }
+    
+    .testimonials-title {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 60px;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    
+    .testimonials-description {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 30px;
+      color: #a6a6a6;
+      margin-bottom: 42px;
+    }
+    
+    .testimonial-quote {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 30px;
+      color: #a6a6a6;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+    
+    .testimonial-author {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      color: #a6a6a6;
+      margin-bottom: 40px;
+    }
+    
+    .testimonial-avatars {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    
+    .avatar {
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    .more-avatars {
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 24px;
+    }
+    
+    .contact-form {
+      background-color: #222938;
+      padding: 40px;
+      border-radius: 20px;
+      flex: 1;
+    }
+    
+    .form-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .form-icon {
+      width: 72px;
+      height: 86px;
+      background-image: url('../assets/images/img_vector.svg');
+      background-size: cover;
+      margin: 0 auto 20px;
+    }
+    
+    .form-title {
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 37px;
+      color: #ffffff;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-label {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      color: #ffffff;
+      display: block;
+      margin-bottom: 20px;
+    }
+    
+    .form-input {
+      width: 100%;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17px;
+      color: #a6a6a6;
+      background-color: #ffffff;
+      padding: 14px 20px;
+      border-radius: 10px;
+    }
+    
+    .form-textarea {
+      width: 100%;
+      height: 80px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17px;
+      color: #a6a6a6;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      resize: vertical;
+    }
+    
+    .form-submit {
+      width: 100%;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      color: #ffffff;
+      background-color: #54bd95;
+      padding: 18px 34px;
+      border-radius: 10px;
+      margin-bottom: 8px;
+    }
+    
+    .form-trial {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17px;
+      color: #ffffff;
+      text-align: center;
+    }
+    
+    /* Footer */
+    .footer {
+      background-color: #161c28;
+      padding: 60px 0 40px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .footer-main {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .footer-brand {
+      flex: 1;
+    }
+    
+    .footer-logo {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 61px;
+      color: #54bd95;
+      margin-bottom: 16px;
+    }
+    
+    .footer-tagline {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      color: #a6a6a6;
+      margin-bottom: 30px;
+    }
+    
+    .footer-email {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      background-color: transparent;
+      border: 2px solid #a6a6a6;
+      border-radius: 30px;
+      padding: 18px;
+      width: 100%;
+    }
+    
+    .footer-email input {
+      flex: 1;
+      background: none;
+      color: #a6a6a6;
+      font-size: 16px;
+    }
+    
+    .footer-email input::placeholder {
+      color: #a6a6a6;
+    }
+    
+    .email-arrow {
+      width: 24px;
+      height: 24px;
+      background-image: url('../assets/images/img_arrowright1_1.svg');
+      background-size: cover;
+    }
+    
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .footer-column-title {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      color: #ffffff;
+    }
+    
+    .footer-link {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      color: #a6a6a6;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-link:hover {
+      color: #54bd95;
+    }
+    
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      padding-top: 60px;
+      border-top: 1px solid #333;
+    }
+    
+    .footer-copyright {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      color: #ffffff;
+      text-align: center;
+    }
+    
+    .footer-legal {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .legal-separator {
+      width: 4px;
+      height: 4px;
+      background-color: #a6a6a6;
+      border-radius: 50%;
+    }
+    
+    .footer-legal-link {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    
+    /* Interactive states */
+    button:hover {
+      transform: translateY(-2px);
+      transition: all 0.3s ease;
+    }
+    
+    button:active {
+      transform: translateY(0);
+    }
+    
+    .nav-item:focus,
+    button:focus,
+    input:focus,
+    textarea:focus {
+      outline: 2px solid #54bd95;
+      outline-offset: 2px;
+    }
+    
+    /* Responsive media queries */
+    @media (min-width: 640px) {
+      .container {
+        padding: 0 24px;
+      }
+      
+      .hero-title {
+        font-size: 60px;
+        line-height: 68px;
+      }
+      
+      .hero-actions {
+        flex-direction: row;
+        align-items: center;
+      }
+      
+      .companies-grid {
+        gap: 32px;
+      }
+      
+      .company-name {
+        font-size: 28px;
+      }
+      
+      .support-content {
+        flex-direction: row;
+        gap: 60px;
+      }
+      
+      .ratings {
+        flex-direction: row;
+        gap: 60px;
+      }
+      
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .benefits-content {
+        flex-direction: row;
+        gap: 60px;
+      }
+      
+      .pricing-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .testimonials-content {
+        flex-direction: row;
+        gap: 60px;
+      }
+      
+      .footer-main {
+        flex-direction: row;
+        gap: 60px;
+      }
+      
+      .footer-links {
+        flex-direction: row;
+        gap: 60px;
+      }
+      
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 32px;
+      }
+      
+      .hamburger {
+        display: none;
+      }
+      
+      .nav-menu {
+        display: flex;
+      }
+      
+      .hero {
+        flex-direction: row;
+        align-items: center;
+        gap: 60px;
+      }
+      
+      .hero-content {
+        flex: 1;
+      }
+      
+      .hero-visual {
+        flex: 1;
+        height: 558px;
+      }
+      
+      .hero-title {
+        font-size: 70px;
+        line-height: 80px;
+      }
+      
+      .hero-description {
+        font-size: 18px;
+      }
+      
+      .cta-button {
+        font-size: 18px;
+        padding: 20px 30px;
+      }
+      
+      .companies-title {
+        font-size: 36px;
+      }
+      
+      .support-title {
+        font-size: 45px;
+      }
+      
+      .features-title {
+        font-size: 45px;
+      }
+      
+      .benefits-title {
+        font-size: 45px;
+      }
+      
+      .pricing-title {
+        font-size: 45px;
+      }
+      
+      .testimonials-title {
+        font-size: 45px;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .logo {
+        font-size: 50px;
+      }
+      
+      .hero-title {
+        font-size: 80px;
+        line-height: 90px;
+      }
+      
+      .companies-title {
+        font-size: 40px;
+      }
+      
+      .support-title {
+        font-size: 50px;
+      }
+      
+      .features-title {
+        font-size: 50px;
+      }
+      
+      .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      .benefits-title {
+        font-size: 50px;
+      }
+      
+      .pricing-title {
+        font-size: 50px;
+      }
+      
+      .pricing-cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      .testimonials-title {
+        font-size: 50px;
+      }
+    }
+    
+    @media (min-width: 1280px) {
+      .container {
+        max-width: 1180px;
+      }
+    }
+  </style>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fshowravs9495back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body>
+  <div class="main-wrapper">
+    <div class="background-elements">
+      <div class="bg-ellipse-1"></div>
+      <div class="bg-ellipse-2"></div>
+      <div class="bg-ellipse-3"></div>
+      <div class="bg-ellipse-4"></div>
+      <div class="bg-ellipse-5"></div>
+      <div class="bg-shadow"></div>
+    </div>
+    
+    <header class="container">
+      <div class="header">
+        <h1 class="logo">Biccas</h1>
+        
+        <nav class="nav-menu" role="navigation">
+          <a href="#" class="nav-item active" role="menuitem">Home</a>
+          <a href="#" class="nav-item" role="menuitem">Product</a>
+          <a href="#" class="nav-item" role="menuitem">FAQ</a>
+          <a href="#" class="nav-item" role="menuitem">Blog</a>
+          <a href="#" class="nav-item" role="menuitem">About Us</a>
+        </nav>
+        
+        <div class="auth-buttons">
+          <button class="login-btn" role="menuitem">Login</button>
+          <button class="signup-btn" role="menuitem">Sign Up</button>
+        </div>
+        
+        <button class="hamburger" aria-label="Menu">☰</button>
+      </div>
+    </header>
+    
+    <main>
+      <section class="hero container">
+        <div class="hero-content">
+          <h2 class="hero-title">We're here to Increase your Productivity</h2>
+          <div class="hero-decoration"></div>
+          <p class="hero-description">Let's make your work more organize and easily using the Taskio Dashboard with many of the latest features in managing work every day.</p>
+          
+          <div class="hero-actions">
+            <button class="cta-button">Try free trial</button>
+            <div class="demo-section">
+              <div class="play-button"></div>
+              <span class="demo-text">View Demo</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <img src="../assets/images/img_charlie_green_3.png" alt="Professional using Biccas platform" class="hero-image" />
+          
+          <div class="hero-cards">
+            <div class="payment-card">
+              <div class="card-info">
+                <div class="card-label">Enter amount</div>
+                <div class="card-amount">$450.00</div>
+              </div>
+              <button class="send-btn">Send</button>
+            </div>
+            
+            <div class="income-card">
+              <div class="card-info">
+                <div class="income-text">Total Income</div>
+                <div class="income-info">
+                  <div class="income-amount">$245.00</div>
+                  <div class="chart-icon"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="companies container">
+        <h2 class="companies-title">More than 25,000 teams use Collabs</h2>
+        <div class="companies-grid">
+          <div class="company-item">
+            <img src="../assets/images/img_group_140.svg" alt="Unsplash logo" class="company-logo" />
+            <span class="company-name">Unsplash</span>
+          </div>
+          <div class="company-item">
+            <div class="company-logo" style="background-image: url('../assets/images/img_rectangle_72.svg'); background-size: cover;"></div>
+            <span class="company-name">Notion</span>
+          </div>
+          <div class="company-item">
+            <img src="../assets/images/img_group_143.svg" alt="Intercom logo" class="company-logo" />
+            <span class="company-name">INTERCOM</span>
+          </div>
+          <div class="company-item">
+            <img src="../assets/images/img_union.svg" alt="Descript logo" class="company-logo" />
+            <span class="company-name">descript</span>
+          </div>
+          <div class="company-item">
+            <div class="company-logo" style="background-color: #a6a6a6; border-radius: 14px;"></div>
+            <span class="company-name">grammarly</span>
+          </div>
+        </div>
+      </section>
+      
+      <section class="support-section">
+        <div class="container">
+          <div class="support-content">
+            <div class="support-text">
+              <h2 class="support-title">How we support our pratner all over the world</h2>
+              <p class="support-description">SaaS become a common delivery model for many business application, including office software, messaging software, payroll processing software, DBMS software, management software</p>
+              
+              <div class="ratings">
+                <div class="rating-item">
+                  <div class="stars" role="img" aria-label="4.9 out of 5 stars">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                  </div>
+                  <div class="rating-text">4.9 / 5 rating</div>
+                  <div class="rating-company">databricks</div>
+                </div>
+                
+                <div class="rating-item">
+                  <div class="stars" role="img" aria-label="4.8 out of 5 stars">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star" style="background-color: #bbbbbb;"></div>
+                  </div>
+                  <div class="rating-text">4.8 / 5 rating</div>
+                  <div class="rating-company">Chainalysis</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="support-features">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <img src="../assets/images/img_activity_1.svg" alt="Publishing icon" />
+                </div>
+                <div class="feature-content">
+                  <h3 class="feature-title">Publishing</h3>
+                  <p class="feature-description">Plan, collaborate, and publishing your contetn that drivees meaningful engagement and growth for your barnd</p>
+                </div>
+              </div>
+              
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <img src="../assets/images/img_pie_chart_1.svg" alt="Analytics icon" />
+                </div>
+                <div class="feature-content">
+                  <h3 class="feature-title">Analytics</h3>
+                  <p class="feature-description">Analyze your performance and create goegeous report</p>
+                </div>
+              </div>
+              
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <img src="../assets/images/img_command_1.svg" alt="Engagement icon" />
+                </div>
+                <div class="feature-content">
+                  <h3 class="feature-title">Engagement</h3>
+                  <p class="feature-description">Quiuckly navigate you anda engage with your adience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="features-section container">
+        <div class="features-header">
+          <h2 class="features-title">Our Features you cab get</h2>
+          <p class="features-description">We offer a variety of interesting features that you can help increase yor productivity at work and manage your projrct esaly</p>
+          <button class="get-started-btn">Get Started</button>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-image collaboration-image"></div>
+            <div class="feature-info">
+              <h3 class="feature-card-title">Collboration Teams</h3>
+              <p class="feature-card-description">Here you can handle projects together with team virtually</p>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-image storage-image">
+              <img src="../assets/images/img_group_177.png" alt="Cloud storage visualization" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="feature-info">
+              <h3 class="feature-card-title">Cloud Storage</h3>
+              <p class="feature-card-description">No nedd to worry about storage because we provide storage up to 2 TB</p>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-image analytics-image">
+              <div style="width: 190px; height: 190px; border: 34px solid #0f8ce9; border-radius: 50%; position: relative;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-image: url('../assets/images/img_group.svg'); width: 32px; height: 36px; background-size: cover;"></div>
+              </div>
+            </div>
+            <div class="feature-info">
+              <h3 class="feature-card-title">Daily Analytics</h3>
+              <p class="feature-card-description">We always provide useful informatin to make it easier for you every day</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="benefits-section container">
+        <div class="benefits-content">
+          <div class="benefits-text">
+            <h2 class="benefits-title">What Benifit Will You Get</h2>
+            
+            <div class="benefits-list">
+              <div class="benefit-item">
+                <div class="check-icon"></div>
+                <span class="benefit-text">Free Consulting With Experet Saving Money</span>
+              </div>
+              <div class="benefit-item">
+                <div class="check-icon"></div>
+                <span class="benefit-text">Online Banking</span>
+              </div>
+              <div class="benefit-item">
+                <div class="check-icon"></div>
+                <span class="benefit-text">Investment Report Every Month</span>
+              </div>
+              <div class="benefit-item">
+                <div class="check-icon"></div>
+                <span class="benefit-text">Saving Money For The Future</span>
+              </div>
+              <div class="benefit-item">
+                <div class="check-icon"></div>
+                <span class="benefit-text">Online Transection</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="benefits-visual">
+            <img src="../assets/images/img_rectangle_48.png" alt="Professional consultation" class="benefits-image" />
+            <div class="success-notification">
+              <div class="success-icon"></div>
+              <span class="success-text">Money Transfer Succesfull</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="pricing-section container">
+        <div class="pricing-header">
+          <h2 class="pricing-title">Choose Plan
+That's Right For You</h2>
+          <p class="pricing-subtitle">Choose plan that works best for you, feel free to contact us</p>
+          
+          <div class="billing-toggle">
+            <button class="billing-option">Bil Monthly</button>
+            <button class="billing-option active">Bil Yearly</button>
+          </div>
+        </div>
+        
+        <div class="pricing-cards">
+          <div class="pricing-card">
+            <div class="plan-header">
+              <h3 class="plan-name">Free</h3>
+              <p class="plan-description">Have a go and test your superpowers</p>
+              <div class="plan-price">
+                <span class="currency">$</span>
+                <span class="price">0</span>
+              </div>
+            </div>
+            
+            <div class="plan-features">
+              <div class="feature-list">
+                <div class="feature">
+                  <div class="feature-check"></div>
+                  <span class="feature-text">2 Users</span>
+                </div>
+                <div class="feature">
+                  <div class="feature-check"></div>
+                  <span class="feature-text">2 Files</span>
+                </div>
+                <div class="feature">
+                  <div class="feature-check"></div>
+                  <span class="feature-text">Public Share & Comments</span>
+                </div>
+                <div class="feature">
+                  <div class="feature-check"></div>
+                  <span class="feature-text">Chat Support</span>
+                </div>
+                <div class="feature">
+                  <div class="feature-check"></div>
+                  <span class="feature-text">New income apps</span>
+                </div>
+              </div>
+              <button class="plan-button">Signup for free</button>
+            </div>
+          </div>
+          
+          <div class="pricing-card featured">
+            <div class="save-badge">Save $50 a year</div>
+            <div class="plan-header">
+              <h3 class="plan-name">Pro</h3>
+              <p class="plan-description">Experiment the power of infinite possibilities</p>
+              <div class="plan-price">
+                <span class="currency">$</span>
+                <span class="price">8</span>
+              </div>
+            </div>
+            
+            <div class="plan-features">
+              <div class="feature-list">
+                <div class="feature">
+                  <div class="feature-check"></div>
+                  <span class="feature-text">4 Users</span>
+                </div>
+                <div class="feature">
+                  <div class="feature-check"></div>
+                  <span class="feature-text">All apps</span>
+                </div>
+                <div class="feature">
+                  <div class="feature-check"></div>
+                  <span class="feature-text">Unlimited editable exports</span>
+                </div>
+                <div class="feature">
+                  <div class="feature-check"></div>
+                  <span class="feature-text">Folders and collaboration</span>
+                </div>
+                <div class="feature">
+                  <div class="feature-check"></div>
+                  <span class="feature-text">All incoming apps</span>
+                </div>
+              </div>
+              <button class="plan-button">Go to pro</button>
+            </div>
+          </div>
+          
+          <div class="pricing-card">
+            <div class="plan-header">
+              <h3 class="plan-name">Business</h3>
+              <p class="plan-description">Unveil new superpowers and join the Design Leaque</p>
+              <div class="plan-price">
+                <span class="currency">$</span>
+                <span class="price">16</span>
+              </div>
+            </div>
+            
+            <div class="plan-features">
+              <div class="feature-list">
+                <div class="feature">
+                  <div class="feature-check"></div>
+                  <span class="feature-text">All the features of pro plan</span>
+                </div>
+                <div class="feature">
+                  <div class="feature-check"></div>
+                  <span class="feature-text">Account success Manager</span>
+                </div>
+                <div class="feature">
+                  <div class="feature-check"></div>
+                  <span class="feature-text">Single Sign-On (SSO)</span>
+                </div>
+                <div class="feature">
+                  <div class="feature-check"></div>
+                  <span class="feature-text">Co-conception pogram</span>
+                </div>
+                <div class="feature">
+                  <div class="feature-check"></div>
+                  <span class="feature-text">Collaboration-Soon</span>
+                </div>
+              </div>
+              <button class="plan-button">Goto Business</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="testimonials-section">
+        <div class="container">
+          <div class="testimonials-content">
+            <div class="testimonials-text">
+              <h2 class="testimonials-title">People are Saying About DoWhith</h2>
+              <p class="testimonials-description">Everything you need to accept to payment and grow your money of manage anywhere on planet</p>
+              
+              <div class="testimonial-quote">
+                "I am very helped by this E-wallet application , my days are very easy to use this application and its very helpful in my life , even I can pay a short time 😍"
+              </div>
+              
+              <div class="testimonial-author">_ Aria Zinanrio</div>
+              
+              <div class="testimonial-avatars">
+                <img src="../assets/images/img_ellipse_54.png" alt="User testimonial" class="avatar" />
+                <img src="../assets/images/img_ellipse_55.png" alt="User testimonial" class="avatar" />
+                <img src="../assets/images/img_ellipse_56.png" alt="User testimonial" class="avatar" />
+                <img src="../assets/images/img_ellipse_57.png" alt="User testimonial" class="avatar" />
+                <button class="more-avatars">+</button>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <div class="form-header">
+                <div class="form-icon"></div>
+                <h3 class="form-title">Get Started</h3>
+              </div>
+              
+              <form>
+                <div class="form-group">
+                  <label class="form-label" for="email">Email</label>
+                  <input type="email" id="email" class="form-input" placeholder="Enter your email" />
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label" for="message">Message</label>
+                  <textarea id="message" class="form-textarea" placeholder="What are you say ?"></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">Request Demo</button>
+                <p class="form-trial">or Start Free Trial</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-main">
+            <div class="footer-brand">
+              <h3 class="footer-logo">Biccas</h3>
+              <p class="footer-tagline">Get started noew try our product</p>
+              <div class="footer-email">
+                <input type="email" placeholder="Enter your email here" />
+                <div class="email-arrow"></div>
+              </div>
+            </div>
+            
+            <div class="footer-links">
+              <div class="footer-column">
+                <h4 class="footer-column-title">Support</h4>
+                <a href="#" class="footer-link">Help centre</a>
+                <a href="#" class="footer-link">Account information</a>
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Contact us</a>
+              </div>
+              
+              <div class="footer-column">
+                <h4 class="footer-column-title">Help and Solution</h4>
+                <a href="#" class="footer-link">Talk to support</a>
+                <a href="#" class="footer-link">Support docs</a>
+                <a href="#" class="footer-link">System status</a>
+                <a href="#" class="footer-link">Covid responde</a>
+              </div>
+              
+              <div class="footer-column">
+                <h4 class="footer-column-title">Product</h4>
+                <a href="#" class="footer-link">Update</a>
+                <a href="#" class="footer-link">Security</a>
+                <a href="#" class="footer-link">Beta test</a>
+                <a href="#" class="footer-link">Pricing product</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="footer-bottom">
+            <p class="footer-copyright">© 2022 Biccas Inc. Copyright and rights reserved</p>
+            <div class="footer-legal">
+              <a href="#" class="footer-legal-link">Terms and Condtions</a>
+              <div class="legal-separator"></div>
+              <a href="#" class="footer-legal-link">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.hamburger').addEventListener('click', function() {
+      const navMenu = document.querySelector('.nav-menu');
+      navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+    });
+    
+    // Billing toggle functionality
+    document.querySelectorAll('.billing-option').forEach(button => {
+      button.addEventListener('click', function() {
+        document.querySelectorAll('.billing-option').forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+    
+    // Form submission
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your interest! We will contact you soon.');
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Add scroll effect to header
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 100) {
+        header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+        header.style.backdropFilter = 'blur(10px)';
+        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+      } else {
+        header.style.backgroundColor = 'transparent';
+        header.style.backdropFilter = 'none';
+        header.style.boxShadow = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
