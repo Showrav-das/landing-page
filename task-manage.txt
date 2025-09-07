@@ -1,8 +1,9 @@
 - navbar - done
-- hero part
+- hero part -done -- button
 - brands section
-- two columns
+- two columns-done
 - features section
 - two columns
+- pricing -done -check proper
 - form section
-- footer section - in progress
+- footer section - done
