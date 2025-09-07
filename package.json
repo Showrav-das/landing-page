@@ -3,6 +3,6 @@
     "sass": "^1.92.0"
   },
 "scripts": {
-    "build": "sass scss/style.scss:css/style.css --style=compressed"
+    "build": "sass scss/style.scss public/css/style.css --style=compressed"
   }
 }
