@@ -504,7 +504,7 @@ body {
 }
 .right-content .feature-item .feature-icon.publishing, .right-content .feature-item .feature-icon.analytics, .right-content .feature-item .feature-icon.engagement {
   background-color: rgba(56, 178, 172, 0.1);
-  color: #38b2ac;
+  color: #54BD95;
 }
 .right-content .feature-item .feature-icon svg {
   width: 24px;
@@ -539,7 +539,7 @@ body {
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 16px;
-  color: #54BD95;
+  color: black;
 }
 .pricing-header .subtitle {
   font-size: 1.125rem;
@@ -569,7 +569,7 @@ body {
   color: #9ca3af;
 }
 .billing-toggle .toggle-btn.active {
-  background-color: #10b981;
+  background-color: #54BD95;
   color: #fff;
 }
 .billing-toggle .toggle-btn:hover:not(.active) {
@@ -597,7 +597,7 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 .pricing-card.featured {
-  background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  background: linear-gradient(135deg, #54BD95 0%, #54BD95 100%);
   color: #fff;
   transform: scale(1.05);
 }
@@ -610,7 +610,7 @@ body {
 }
 .pricing-card.featured .checkmark {
   background-color: #fff;
-  color: #10b981;
+  color: #54BD95;
 }
 .pricing-card.featured:hover {
   transform: scale(1.05) translateY(-4px);
@@ -636,10 +636,16 @@ body {
   vertical-align: top;
   color: #54BD95;
 }
+.pricing-card .price .special-currency {
+  color: white;
+}
 .pricing-card .price .amount {
   font-size: 4rem;
   font-weight: 700;
   color: #54BD95;
+}
+.pricing-card .price .special-amount {
+  color: white;
 }
 .pricing-card .savings {
   font-size: 0.875rem;
@@ -650,8 +656,9 @@ body {
 
 .features {
   list-style: none;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   text-align: left;
+  background: #F9FAFB;
 }
 .features .feature {
   display: flex;
@@ -659,13 +666,13 @@ body {
   gap: 12px;
   padding: 8px 0;
   font-size: 1rem;
-  color: #54BD95;
+  color: black;
 }
 .features .feature .checkmark {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #10b981;
+  background-color: #54BD95;
   color: #fff;
   display: flex;
   align-items: center;
@@ -687,7 +694,7 @@ body {
 }
 .cta-btn.solid-btn {
   background-color: #fff;
-  color: #10b981;
+  color: #54BD95;
 }
 .cta-btn.solid-btn:hover {
   background-color: rgba(255, 255, 255, 0.9);
@@ -695,11 +702,11 @@ body {
 }
 .cta-btn.text-btn {
   background: transparent;
-  color: #10b981;
+  color: #54BD95;
   border: 2px solid transparent;
 }
 .cta-btn.text-btn:hover {
-  border-color: #10b981;
+  border-color: #54BD95;
   background-color: rgba(16, 185, 129, 0.05);
 }
 
