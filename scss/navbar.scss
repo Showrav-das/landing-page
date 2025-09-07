@@ -697,7 +697,7 @@ body {
     .price,
     .savings,
     .feature {
-      color: $white;
+      color: white;
     }
 
     .checkmark {
@@ -755,15 +755,20 @@ body {
     font-size: 0.875rem;
     color: $white;
     margin-bottom: 32px;
+    background: #85DAB9;
     opacity: 0.9;
   }
 }
+
+
 
 .features {
   list-style: none;
   margin-bottom: 30px;
   text-align: left;
   background: #F9FAFB;
+  padding: 0 10px;
+  border-radius: 10px;
 
   .feature {
     display: flex;
@@ -789,15 +794,25 @@ body {
   }
 }
 
+.special-features {
+  background-color: white;
+
+}
+
 .cta-btn {
   width: 100%;
   padding: 16px 24px;
   border-radius: 12px;
+  background: white;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
   border: none;
+  box-shadow: 3px 3px 0px -42px rgba(0, 0, 0, 0.65);
+  -webkit-box-shadow: 3px 3px 0px -42px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 3px 3px 0px -42px rgba(0, 0, 0, 0.65);
+  margin-bottom: 10px;
 
   &.solid-btn {
     background-color: $white;
@@ -810,7 +825,7 @@ body {
   }
 
   &.text-btn {
-    background: transparent;
+    background: white;
     color: $primary-color;
     border: 2px solid transparent;
 

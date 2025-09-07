@@ -7,3 +7,7 @@
 - pricing -done -check proper
 - form section
 - footer section - done
+
+-----------
+
+docker: https://www.youtube.com/playlist?list=PLZij6bgEHkTXhO0NziZmxSrLJa3e0KGWF

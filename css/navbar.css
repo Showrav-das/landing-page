@@ -605,7 +605,7 @@ body {
 .pricing-card.featured .price,
 .pricing-card.featured .savings,
 .pricing-card.featured .feature {
-  color: #fff;
+  color: white;
 }
 .pricing-card.featured .checkmark {
   background-color: #fff;
@@ -650,6 +650,7 @@ body {
   font-size: 0.875rem;
   color: #fff;
   margin-bottom: 32px;
+  background: #85DAB9;
   opacity: 0.9;
 }
 
@@ -658,6 +659,8 @@ body {
   margin-bottom: 30px;
   text-align: left;
   background: #F9FAFB;
+  padding: 0 10px;
+  border-radius: 10px;
 }
 .features .feature {
   display: flex;
@@ -681,15 +684,24 @@ body {
   flex-shrink: 0;
 }
 
+.special-features {
+  background-color: white;
+}
+
 .cta-btn {
   width: 100%;
   padding: 16px 24px;
   border-radius: 12px;
+  background: white;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
   border: none;
+  box-shadow: 3px 3px 0px -42px rgba(0, 0, 0, 0.65);
+  -webkit-box-shadow: 3px 3px 0px -42px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 3px 3px 0px -42px rgba(0, 0, 0, 0.65);
+  margin-bottom: 10px;
 }
 .cta-btn.solid-btn {
   background-color: #fff;
@@ -700,7 +712,7 @@ body {
   transform: translateY(-1px);
 }
 .cta-btn.text-btn {
-  background: transparent;
+  background: white;
   color: #54BD95;
   border: 2px solid transparent;
 }
@@ -853,5 +865,3 @@ body {
     font-size: 1rem;
   }
 }
-
-/*# sourceMappingURL=navbar.css.map */
